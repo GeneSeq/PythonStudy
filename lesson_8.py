@@ -56,3 +56,31 @@ def matrix_mul(mx1, mx2):
                       for i in xrange(nrow_mx1)]
     def get_col(mx, j):
         return [row[j] for row in mx]
+
+
+# From class
+# def p_distance(str1, str2):
+#     """
+#
+#     :param str1:
+#     :param str2:
+#     :return:
+#     """
+#     if len(str1) != len(str2):
+#         raise ValueError("")
+#     mismatches = 0
+#     for a, b in izip(str1, str2):
+#         if a != b and a != "-" and b != "-":
+#             mismatches += 1
+#         else
+
+
+def matrix_mul(matr1, matr2):
+    nrow_matr1, ncol_matr1 = len(matr1), len(matr1[0])
+    nrow_matr2, ncol_matr2 = len(matr2), len(matr2[0])
+    if ncol_matr1 != nrow_matr2:
+        raise ValueError("")
+    matrix_mult_res = [[None for j in xrange(ncol_matr2)]
+                       for i in xrange(nrow_matr1)]
+    def get_col(matr, j):
+        return [row[j] for row in matr]
